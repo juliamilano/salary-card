@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <section class="flex-row">
+        <div class="block__count-form">
+            <form action="" method="post" id="form-0" name="addForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Имя" name='addname'>
+                    <!-- <label for="name">Name</label> -->
+                </div>
+                <div class="form-group">
+                    <select name="salary-type" id="selectSalary" name="addselect">
+                        <option value="HourlySalaryEmployee">Почасовая</option>
+                        <option value="FixedSalaryEmployee" selected>Фиксированная</option>
+                    </select>
+                    <!-- <label for="name">Salary</label> -->
+                </div>
+                <div class="form-group">
+                    <input type="text" id="valueSalary" placeholder="Цена труда" name="addvalue">
+                    <!-- <label for="name">Value of Salary</label>                  -->
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add" id="addButton" class="btn">
+                </div>
+            </form>
+        </div>
+    <div class="wrap-for-check custom-scroll" id="wrap-check">     
+            <div class="check h5">    
+                <h5>Список сотрудников</h5>
+            </div>
+        <div class="check" id="check-data" style="display: none;">
+            <p class="idcheck" id="idcheck"></p>
+            <p class="namecheck" id="namecheck"></p>
+            <p class="typeSalarycheck" id="typeSalarycheck"></p>
+            <p class="valueSalarycheck" id="valueSalarycheck"></p>
+        </div>
+
+        <div class="check h5">    
+                <h5>Итого:
+                <span id="total"></span> грн </h5>
+        </div>
+    </div>
+    </section>
+</div>
+<script src="script.js"></script>
+<script src="script-clear.js"></script>
+</body>
+</html>

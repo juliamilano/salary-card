@@ -1,0 +1,295 @@
+/*css start template*/
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('webfont.eot'); /* IE9 Compat Modes */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+ /* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body{
+    background: #ffffff;
+    color: #000;
+    font-size: 12px;
+    position: relative;
+    /* -webkit-font-smoothing: antialiased;
+    -webkit-text-decoration-skip: none; */
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.layout-positioner {
+    max-width: 1000px;
+    /* min-width: 700px; */
+    margin: 0 auto;
+    outline: 5px dotted green;
+    
+ }
+
+.layout-positioner:after {
+    content:'';
+    display: table;
+    clear: both;   
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+/* 
+a:focus { 
+    outline: thin dotted; 
+} */
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input:focus, button:focus, select:focus { 
+    outline: none; 
+} 
+.custom-scroll{
+    overflow-y: auto;
+    max-height: 97%;
+}
+.custom-scroll::-webkit-scrollbar-track {
+	background-color: #eaeaea;
+}
+.custom-scroll::-webkit-scrollbar {
+	width: 3px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+	background-color: #eaeaea;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+	background-color: #646464;
+}
+.custom-scroll::-webkit-scrollbar:horizontal {
+	width: 3px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #646464;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #646464;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #646464;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #646464;
+}
+:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+:focus::-moz-placeholder{
+    color: transparent;
+}
+:focus:-moz-placeholder{
+    color: transparent;
+}
+:focus:-ms-input-placeholder{
+    color: transparent; 
+}
+.element{
+    position: relative;
+}
+.element:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+.element:after {
+	content: "";
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	display: block;
+    background: url("") no-repeat 0 0px;
+    background-size: 100% 100%;
+    z-index: 1;    
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .flex-row div{
+    flex-grow: 1; 
+} */
+.flex-row-j-s-a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-row-j-s-b{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+div img{
+    width: 100%;
+    height: auto;
+}
+
+section{
+    width: 100%;
+    min-height: 400px;
+}
+
+.block__count-form{
+    flex-grow: 2;
+    min-height: 300px;
+    background: linear-gradient(to top, #ffffff, #c7f2ff);
+
+}
+#form-0{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form-group{
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group input,
+.form-group select{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    text-align-last:center; 
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #054f61;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(17, 50, 59);
+}
+.form-group .btn{
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 20px 30px;
+    margin: 40px auto;
+    height: auto;
+    max-width: 200px;
+    border: none;
+    -webkit-appearance: none;
+    color: #fff;
+    background-color: #054f61;
+    border-radius: 10px;
+}
+.wrap-for-check{
+    flex-basis: 500px;
+    height: calc(100vh - 2px);
+    border: 1px solid rgb(41, 41, 78);
+    position: relative;
+}
+.check.h5{
+    color: #fff;
+    background: #054f61;
+ }
+.check.h5 h5{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+.check{
+    border-bottom: 1px solid lightslategray;
+    padding: 10px;
+}
+
+.check .namecheck,
+.check .valueSalarycheck{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+    text-align: center;
+}
+.check .valueSalarycheck{
+
+}
