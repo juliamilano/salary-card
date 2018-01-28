@@ -1,1 +1,30 @@
-[{"type":"hourlysalaryemployee","salary":2840,"name":"Anna","id":1},{"type":"hourlysalaryemployee","salary":2292,"name":"Bob","id":2},{"type":"fixedsalaryemployee","salary":8000,"name":"Dany","id":3},{"type":"fixedsalaryemployee","salary":8000,"name":"Clara","id":4},{"type":"fixedsalaryemployee","salary":1000,"name":"Egor","id":5},{"type":"fixedsalaryemployee","salary":5000,"name":"Вася","id":40},{"type":"hourlysalaryemployee","salary":11400,"name":"Аня ","id":16},{"type":"fixedsalaryemployee","salary":5000,"name":"Вася","id":36},{"type":"fixedsalaryemployee","salary":10000,"name":"Юля","id":31}]
+[{
+  "type": "HourlySalaryEmployee",
+  "salary": 6620,
+  "name": "Anna",
+  "id": 1
+},
+{
+  "type": "HourlySalaryEmployee",
+  "salary": 1255,
+  "name": "Bob",
+  "id": 2
+},
+{
+  "type": "FixedSalaryEmployee",
+  "salary": 8000,
+  "name": "Dany",
+  "id": 3
+},
+{
+  "type": "FixedSalaryEmployee",
+  "salary": 8000,
+  "name": "Clara",
+  "id": 4
+},
+{
+  "type": "FixedSalaryEmployee",
+  "salary": 1000,
+  "name": "Egor",
+  "id": 5
+}]

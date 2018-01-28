@@ -11,9 +11,9 @@
 <div class="main">
     <section class="flex-row">
         <div class="block__count-form">
-            <form action="" method="post" id="form-0" name="addForm">
+            <form action="" method="post" id="form-0" name="addForm" >
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Имя" name='addname'>
+                    <input type="text" id="name" placeholder="Имя" name='addname' data-pattern="[A-Za-zА-Яа-яЁё]{1,}">
                     <!-- <label for="name">Name</label> -->
                 </div>
                 <div class="form-group">
@@ -24,7 +24,7 @@
                     <!-- <label for="name">Salary</label> -->
                 </div>
                 <div class="form-group">
-                    <input type="text" id="valueSalary" placeholder="Цена труда" name="addvalue">
+                    <input type="text" id="valueSalary" placeholder="Цена труда" name="addvalue" data-pattern="\d{2,}">
                     <!-- <label for="name">Value of Salary</label>                  -->
                 </div>
                 <div class="form-group">
@@ -44,13 +44,14 @@
         </div>
 
         <div class="check h5">    
-                <h5>Итого:
+                <h5>Итого за месяц:
                 <span id="total"></span> грн </h5>
         </div>
     </div>
     </section>
 </div>
+
 <script src="script.js"></script>
-<script src="script-clear.js"></script>
+<!-- <script src="script-clear.js"></script> -->
 </body>
 </html>

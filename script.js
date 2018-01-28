@@ -205,7 +205,7 @@ function countTotal(arr){
 
 /**
  * 
- * @param {int} число, число ;
+ * @param {int, int} число, число ;
  */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -216,8 +216,10 @@ function getRandomInt(min, max) {
 // var employ = new EmployFactory(div, 11, "Fao", "HourlySalaryEmployee", 50);
 
 // console.log(employ.getValSalary());
+window.addEventListener("load", init, false);
 
-window.onload = function(){
+
+function init(){
      /**
      * все поля для ввода
      */
@@ -249,17 +251,25 @@ window.onload = function(){
     // name сотрудника
     inpNameEmploier.addEventListener("change", function (e){
         inpValueName = inpNameEmploier.value;
+        
+        // func валидации включающая кнпку в случае правильности данных
+        validate();
     });
 
     //значение з/п
     inpValueSalary.addEventListener("change", function (e){
         inpValueSalaryVal = inpValueSalary.value;
-        console.log(inpValueSalaryVal)
+
+        // func валидации включающая кнпку в случае правильности данных
+        validate();
     });
   // обработчик на кнопку аdd
-    addButton.addEventListener("click", function (e){
+
+    var addData = function(e){
         // отмена дейтвия кнопки по умолчанию
-        e.preventDefault();
+        e.preventDefault(); 
+      
+
         // создаем рандомный айди
         var idRandom = getRandomInt(5, 50);
         // переменная a, должна быть!!!! чтобы что-то передать. должен быть див, но он генерируется с классом на него автоматом в конструкторе, переменная a должна быть , или любой первый аргумент
@@ -278,7 +288,39 @@ window.onload = function(){
          * */
         // считаем итого
         countTotal(dataArrJson);
-    });
+ 
+    };
+
+    // 
+    function validate(){    
+        var formAdd = document.forms["form-0"];    
+        for (var i = 0; i < formAdd.elements.length; i++) {
+            var e = formAdd.elements[i]; // находит элементы формы
+            var pattern = e.getAttribute("data-pattern"); // отфильтровывает только те элементы которые с паттерном
+            if (pattern) { // если находит pattern то:
+                if (inpNameEmploier.value.search(inpNameEmploier.dataset.pattern) > -1 && 
+                inpValueSalary.value.search(inpValueSalary.dataset.pattern) > -1){ // если находим паттерн в полях name и salary, то:          
+                    addButton.removeAttribute('disabled'); // разблокировываем кнопку
+                    addButton.addEventListener("click", addData, false); // добавляем на кнопку событие клик с функцией Которая работает с введенными данными
+                }else{             // если паттерн нен находит в введенных данных, то      
+                    addButton.setAttribute('disabled', 'disabled'); // заблокировываем кнопку
+                    if(addButton.onclick){        // если было навешено событие , убираем его              
+                        addButton.removeEventListener("click", addData, false);
+                    }
+                }
+            }
+        }          
+    };
+    // if (inpValueSalaryVal.search( /лю/i ), inpValueName){
+    //     addButton.addEventListener("click", addData, false);
+    // }else{
+    //     if(addButton.onclick){
+    //         addButton.removeEventListener("click", addData, false);
+    //     }
+    // }
+
+
+    // addButton.addEventListener("click", addData, false);
 
     /**
      * выбираем елементы из чек-листа , (не обязательно)
