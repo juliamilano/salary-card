@@ -283,12 +283,21 @@ section{
     color: #646464;
     border: 1px solid #054f61;
 }
-
-.wrap-for-check{
+.block__right{
     flex-basis: 500px;
     height: calc(100vh - 2px);
     border: 1px solid rgb(41, 41, 78);
     position: relative;
+}
+.check.h5.total{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.wrap-for-check{
+    height: 85%;   
 }
 .check.h5{
     color: #fff;
@@ -303,13 +312,16 @@ section{
     border-bottom: 1px solid lightslategray;
     padding: 10px;
 }
-
+.check .namecheck{
+    text-transform: capitalize;
+}
 .check .namecheck,
 .check .valueSalarycheck{
     font-size: 20px;
     color: rgb(53, 53, 53);
     font-weight: bold;
     text-align: center;
+
 }
 .check .valueSalarycheck{
 
